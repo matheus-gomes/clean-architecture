@@ -17,7 +17,6 @@ productRoute.post("/", async (req: Request, res: Response) => {
 
         const output = await usecase.execute(productDto);
 
-        console.log("Product created:", output);
         res.send(output);
     } catch (err) {
         res.status(500).send(err);
